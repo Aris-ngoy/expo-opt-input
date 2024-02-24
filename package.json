@@ -1,6 +1,6 @@
 {
   "name": "react-native-expo-opt-input",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "react-native opt textinput",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -57,6 +57,7 @@
     "@evilmartians/lefthook": "^1.5.0",
     "@react-native/eslint-config": "^0.73.1",
     "@release-it/conventional-changelog": "^5.0.0",
+    "@testing-library/react-native": "^12.4.3",
     "@types/jest": "^29.5.5",
     "@types/react": "^18.2.44",
     "commitlint": "^17.0.2",
@@ -84,10 +85,11 @@
   ],
   "packageManager": "yarn@3.6.1",
   "jest": {
-    "preset": "react-native",
-    "modulePathIgnorePatterns": [
-      "<rootDir>/example/node_modules",
-      "<rootDir>/lib/"
+    "preset": "jest-expo",
+    "transformIgnorePatterns": [
+      "/node_modules/(?!(@react-native|react-native)/).*/",
+      "expo",
+      "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
     ]
   },
   "commitlint": {
@@ -155,5 +157,10 @@
         }
       ]
     ]
+  },
+  "dependencies": {
+    "expo-clipboard": "^5.0.1",
+    "jest-expo": "^50.0.2",
+    "react-test-renderer": "^18.2.0"
   }
 }

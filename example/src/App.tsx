@@ -1,18 +1,22 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-expo-opt-input';
+import { StyleSheet, View } from 'react-native';
+import OTPInputView from 'react-native-expo-opt-input';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
-
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <OTPInputView
+        placeholderCharacter=""
+        codeInputFieldStyle={{
+          borderColor: 'black',
+          borderWidth: 2,
+          color: 'gray',
+        }}
+        returnKeyType="done"
+        style={{ width: 200 }}
+        pinCount={4}
+      />
     </View>
   );
 }
