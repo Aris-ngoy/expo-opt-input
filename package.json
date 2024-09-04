@@ -1,6 +1,6 @@
 {
   "name": "react-native-expo-opt-input",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "react-native opt textinput",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
