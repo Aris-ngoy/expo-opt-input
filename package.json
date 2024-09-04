@@ -1,6 +1,6 @@
 {
   "name": "react-native-expo-opt-input",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "react-native opt textinput",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -57,19 +57,25 @@
     "@evilmartians/lefthook": "^1.5.0",
     "@react-native/eslint-config": "^0.73.1",
     "@release-it/conventional-changelog": "^5.0.0",
+    "@testing-library/jest-native": "^5.4.3",
     "@testing-library/react-native": "^12.4.3",
     "@types/jest": "^29.5.5",
-    "@types/react": "^18.2.44",
+    "@types/react": "~18.2.79",
     "commitlint": "^17.0.2",
     "del-cli": "^5.1.0",
     "eslint": "^8.51.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.1",
+    "expo": "^51.0.32",
+    "expo-clipboard": "~6.0.3",
+    "expo-modules-core": "~1.12.24",
     "jest": "^29.7.0",
+    "jest-expo": "~51.0.4",
     "prettier": "^3.0.3",
     "react": "18.2.0",
-    "react-native": "0.73.4",
+    "react-native": "0.74.5",
     "react-native-builder-bob": "^0.20.0",
+    "react-test-renderer": "^18.2.0",
     "release-it": "^15.0.0",
     "typescript": "^5.2.2"
   },
@@ -87,9 +93,7 @@
   "jest": {
     "preset": "jest-expo",
     "transformIgnorePatterns": [
-      "/node_modules/(?!(@react-native|react-native)/).*/",
-      "expo",
-      "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
+      "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules)"
     ]
   },
   "commitlint": {
@@ -157,10 +161,5 @@
         }
       ]
     ]
-  },
-  "dependencies": {
-    "expo-clipboard": "^5.0.1",
-    "jest-expo": "^50.0.2",
-    "react-test-renderer": "^18.2.0"
   }
 }

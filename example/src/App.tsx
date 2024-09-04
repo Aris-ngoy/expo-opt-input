@@ -8,13 +8,9 @@ export default function App() {
     <View style={styles.container}>
       <OTPInputView
         placeholderCharacter=""
-        codeInputFieldStyle={{
-          borderColor: 'black',
-          borderWidth: 2,
-          color: 'gray',
-        }}
+        codeInputFieldStyle={styles.codeInputField}
         returnKeyType="done"
-        style={{ width: 200 }}
+        style={styles.otpInputView}
         pinCount={4}
       />
     </View>
@@ -27,9 +23,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
+  codeInputField: {
+    borderColor: 'black',
+    borderWidth: 2,
+    color: 'gray',
+  },
+  otpInputView: {
+    width: 200,
   },
 });
